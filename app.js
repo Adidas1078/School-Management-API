@@ -6,6 +6,9 @@ const listSchools = require('./routes/listSchools');
 const app = express();
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the School Management API!');
+});
 // Routes
 app.use('/api', addSchool);
 app.use('/api', listSchools);
